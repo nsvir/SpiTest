@@ -1,9 +1,8 @@
-import sys
 from datetime import datetime, timedelta
 
-import SpiralsLogTest
 from LogAgent import LogAgent
-from tools.fancy import Log
+from SpiCore import SpiCore
+from utils.SpiExceptions import AssertFailedException
 
 
 class StatusAgent(LogAgent):
@@ -60,20 +59,16 @@ class NotificationAgent(LogAgent):
 
     def notify_match_expected(self, timestamp, log):
         if self.waiting_push is False:
-            raise SpiralsLogTest.AssertFailedException("Notification was sent but not expected")
+            raise AssertFailedException("Notification was sent but not expected")
         self.waiting_push = False
 
     def notify_not_match(self, timestamp):
         if self.waiting_push is True and to_datetime(timestamp) > self.waiting_time:
-            raise SpiralsLogTest.AssertFailedException("Notification was not sent but expected")
+            raise AssertFailedException("Notification was not sent but expected")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "-v":
-        SpiralsLogTest.LogSuccess = Log.Success
-        SpiralsLogTest.LogInfo = Log.Info
-        SpiralsLogTest.LogFailure = Log.Failure
-    rocketChat = SpiralsLogTest.SpiralsCore()
+    rocketChat = SpiCore()
     status_agent = StatusAgent()
     notification_agent = NotificationAgent(status_agent)
     message_agent = MessageAgent(notification_agent)

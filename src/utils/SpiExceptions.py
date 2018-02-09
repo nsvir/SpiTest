@@ -1,0 +1,2 @@
+class AssertFailedException(Exception):
+    pass
