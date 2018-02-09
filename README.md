@@ -8,8 +8,20 @@ using log files
 ## QuickStart
 
 ### RocketChat
+Inflate ElasticSearch with RocketChat logs
 
+```
+cd ./rocketchat
+cat README.md
+```
 
+### SpiTest
+```
+virtualenv -p python3 venv
+source ./venv/bin/activate
+pip install -r requierments.txt
+PYTHONPATH=./src python rocketchat/rocketchat_test.py
+```
 
 ## How to use it
 
