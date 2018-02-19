@@ -52,4 +52,5 @@ Have a look at `./rocketchat/elastic/logsstash/logstash.conf` for an exemple
 
 
 ## Author
-This work is born in Spirals
+[Nicolas SVIRCHEVSKY](https://github.com/nsvir)
+[Lakhdar MEFTAH](https://github.com/m3ftah)
