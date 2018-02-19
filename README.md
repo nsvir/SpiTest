@@ -5,6 +5,8 @@ A framework, implemented with python3,
 to easily assert the expected behavior of a software in real time,
 using log files
 
+![scientific_poster](https://raw.githubusercontent.com/nsvir/SpiTest/master/poster/Nicolas%20SVIRCHEVSKY.png)
+
 ## QuickStart
 
 ### RocketChat
@@ -50,4 +52,5 @@ Have a look at `./rocketchat/elastic/logsstash/logstash.conf` for an exemple
 
 
 ## Author
-This work is born in Spirals
+- [Nicolas SVIRCHEVSKY](https://github.com/nsvir)
+- [Lakhdar MEFTAH](https://github.com/m3ftah)
