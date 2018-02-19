@@ -52,5 +52,5 @@ Have a look at `./rocketchat/elastic/logsstash/logstash.conf` for an exemple
 
 
 ## Author
-[Nicolas SVIRCHEVSKY](https://github.com/nsvir)
-[Lakhdar MEFTAH](https://github.com/m3ftah)
+- [Nicolas SVIRCHEVSKY](https://github.com/nsvir)
+- [Lakhdar MEFTAH](https://github.com/m3ftah)
